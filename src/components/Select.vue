@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Chevron from './Chevron.vue'
+import Chevron from './icons/Chevron.vue'
 import { ref } from 'vue'
 
 const value = ref('')
@@ -16,7 +16,7 @@ const updateValueText = () => {
 
 <template>
   <div class="select-wrapper">
-    <select v-model="value" ref="selectRef" @change="updateValueText">
+    <select v-model="value" ref="selectRef" @change="updateValueText" v-bind="$props">
       <slot></slot>
     </select>
     <span>{{ valueText }}</span>
@@ -35,7 +35,7 @@ const updateValueText = () => {
   padding: 0.5rem 1rem;
   position: relative;
   justify-content: space-between;
-  width: fit-content;
+  width: max-content;
 }
 .select-wrapper:hover {
   color: black;
