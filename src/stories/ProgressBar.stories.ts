@@ -5,6 +5,22 @@ const meta: Meta<typeof ProgressBar> = {
   title: 'ProgressBar',
   component: ProgressBar,
   tags: ['autodocs'],
+  argTypes: {
+    value: {
+      control: {
+        type: 'range',
+        min: 0,
+        max: 100,
+        step: 10,
+      },
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
+  },
   args: {
     value: 50,
     variant: 'medium',

@@ -30,7 +30,7 @@ const height = computed(() => {
     role="progressbar"
     :aria-label="props['aria-label']"
     :aria-valuenow="props.value"
-    :style="`padding: ${props.variant === 'large' ? '4px' : '0'}`"
+    :style="`--padding: ${props.variant === 'large' ? '4px' : '0px'}`"
   >
     <div
       class="inner-progress"
@@ -41,15 +41,15 @@ const height = computed(() => {
 
 <style scoped>
 [role='progressbar'] {
+  --inner-border-radius: 4px;
   background-color: rgb(128, 128, 128, 0.15);
+  border-radius: calc(var(--inner-border-radius) + var(--padding, 0px) / 2);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  display: block;
-  padding: 4px;
+  padding: var(--padding, 0);
 }
 
 .inner-progress {
-  border-radius: 4px;
+  border-radius: var(--inner-border-radius);
   width: 100%;
 }
 </style>
