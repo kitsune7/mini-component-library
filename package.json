@@ -1,0 +1,35 @@
+{
+  "name": "mini-component-library",
+  "version": "1.0.0",
+  "description": "Module 3 workshop for Josh Comeau's CSS Course (but with my own setup)",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "type-check": "vue-tsc --build --force",
+    "format": "prettier --write \"**/*.{ts,tsx,md,vue}\""
+  },
+  "author": "Christopher Bradshaw",
+  "license": "MIT",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.3.3",
+    "@storybook/addon-essentials": "^8.0.8",
+    "@storybook/addon-interactions": "^8.0.8",
+    "@storybook/addon-links": "^8.0.8",
+    "@storybook/blocks": "^8.0.8",
+    "@storybook/test": "^8.0.8",
+    "@storybook/vue3": "^8.0.8",
+    "@storybook/vue3-vite": "^8.0.8",
+    "@types/node": "^20.12.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/tsconfig": "^0.5.1",
+    "prettier": "^3.2.5",
+    "storybook": "^8.0.8",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vue-tsc": "^2.0.14"
+  },
+  "dependencies": {
+    "vue": "^3.4.23"
+  }
+}

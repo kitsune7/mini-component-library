@@ -1,0 +1,22 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolvePackageJsonExports": false,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "test/**/*.ts", "src/**/*.json", ".storybook/**/*.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}
